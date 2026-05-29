@@ -77,6 +77,7 @@ Recommended board title:
 | wallpaper.jpg | Background image |
 | logo.png | Dashboard logo |
 | ops-atlantic.css | Theme stylesheet |
+| name | [copy this unicode] 𝙾𝙿𝚂://𝙰𝚃𝙻𝙰𝙽𝚃𝙸𝙲 |
 
 ---
 
