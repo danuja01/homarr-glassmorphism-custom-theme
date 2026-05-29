@@ -1,0 +1,350 @@
+/* =========================================================
+   OPS://ATLANTIC — HOMARR GLASS UI THEME
+   =========================================================
+   Author: Danuja
+   Style : Naval / Tactical / Glassmorphism
+
+   Features:
+   - Optimized Blur Rendering
+   - Smooth Modals
+   - Glassmorphism UI
+   - Homarr Optimized
+   - Mantine Popup Design
+   - GitHub Ready Structure
+   ========================================================= */
+
+
+/* =========================================================
+   1. ROOT VARIABLES
+   ========================================================= */
+
+:root {
+  --mantine-color-body: rgba(12, 12, 18, 0.25);
+}
+
+
+/* =========================================================
+   2. RESPONSIVE LAYOUT
+   ========================================================= */
+
+/* Desktop-only widget visibility */
+@media (max-width: 1599px) {
+  html {
+    overflow: hidden !important;
+  }
+
+  .desktop-only {
+    display: none !important;
+    overflow-y: hidden !important;
+  }
+}
+
+/* Dashboard — desktop */
+@media (min-width: 1000px) {
+  body.dashboard-page .grid-stack,
+  body:has(.grid-stack) .grid-stack {
+    height: 100vh !important;
+    overflow: hidden !important;
+  }
+
+  body.dashboard-page .mantine-AppShell-main,
+  body:has(.grid-stack) .mantine-AppShell-main {
+    overflow: hidden !important;
+  }
+
+  /* Settings / non-dashboard pages */
+  body:not(:has(.grid-stack)) .mantine-AppShell-main {
+    height: 100vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+}
+
+/* Dashboard — mobile / tablet */
+@media (max-width: 999px) {
+  html,
+  body {
+    height: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .mantine-AppShell-main {
+    padding: 76px 0px 24px 0px !important;
+    height: 100vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .grid-stack {
+    min-height: 100% !important;
+    overflow: visible !important;
+    padding-bottom: 120px !important;
+  }
+
+  .grid-stack-item {
+    touch-action: auto;
+  }
+}
+
+
+/* =========================================================
+   3. GLOBAL BASE
+   ========================================================= */
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.10);
+  border-radius: 20px;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4 {
+  color: rgba(255,255,255,0.92);
+}
+
+p,
+span {
+  color: rgba(255,255,255,0.82);
+}
+
+
+/* =========================================================
+   4. LAYOUT SHELL
+   ========================================================= */
+
+header {
+  background: rgba(10,10,18,0.22) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+aside {
+  background: rgba(12,12,20,0.20) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.mantine-AppShell-header {
+  overflow: hidden;
+}
+
+.logo {
+  width: 65px !important;
+  height: 62px !important;
+  margin-right: -15px !important;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+
+/* =========================================================
+   5. DASHBOARD GRID
+   ========================================================= */
+
+.grid-stack-item-content {
+  background: transparent !important;
+  overflow: hidden !important;
+}
+
+
+/* =========================================================
+   6. GLASS CARDS & WIDGETS
+   ========================================================= */
+
+.mantine-Card-root,
+.item-container,
+[data-grid-item] {
+  background: rgba(18, 18, 28, 0.22) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  border-radius: 20px !important;
+  box-shadow:
+    0 4px 16px rgba(0,0,0,0.22),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+
+/* =========================================================
+   7. FORMS & INPUTS
+   ========================================================= */
+
+input,
+textarea,
+.mantine-Input-input {
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.05) !important;
+  border-radius: 14px !important;
+}
+
+
+/* =========================================================
+   8. TABLES
+   ========================================================= */
+
+/* Generic tables */
+table {
+  background: rgba(20,20,28,0.18) !important;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+tr {
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+tbody tr {
+  background: rgba(255,255,255,0.03) !important;
+  transition: none !important;
+}
+
+thead,
+.mantine-Table-thead {
+  background: rgba(255,255,255,0.04) !important;
+}
+
+th {
+  color: rgba(255,255,255,0.92) !important;
+  font-weight: 600 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+}
+
+td {
+  border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+  color: rgba(255,255,255,0.82) !important;
+}
+
+/* Docker / MRT table wrapper */
+.mrt-table-paper,
+.MRT_TablePaper-module_root__q0v5L,
+.mrt-table-container,
+.MRT_TableContainer-module_root__JIsGB {
+  background: rgba(10, 14, 24, 0.18) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.05) !important;
+  border-radius: 20px !important;
+  box-shadow:
+    0 8px 30px rgba(0,0,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+  overflow: hidden !important;
+  overflow-y: auto !important;
+  overflow-x: auto !important;
+  height: 100% !important;
+  scrollbar-width: thin;
+}
+
+.mrt-table-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.mrt-table-container::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.12);
+  border-radius: 10px;
+}
+
+/* Table core */
+.docker-widget-table,
+.mantine-Table-table {
+  background: transparent !important;
+  border-collapse: collapse !important;
+}
+
+/* Strip nested Mantine backgrounds (must follow card/table glass rules) */
+.mantine-Paper-root,
+.mantine-Card-root,
+.mrt-table-paper *,
+.mrt-table-container * {
+  background-color: transparent !important;
+}
+
+
+/* =========================================================
+   9. UI COMPONENTS
+   ========================================================= */
+
+/* Status badges */
+.mantine-Badge-root {
+  background: rgba(50,255,140,0.12) !important;
+  border: 1px solid rgba(50,255,140,0.15) !important;
+  color: #98ffb6 !important;
+}
+
+/* Icon buttons */
+.mantine-ActionIcon-root {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.05) !important;
+  backdrop-filter: blur(4px);
+}
+
+/* Progress bars */
+.mantine-Progress-root {
+  overflow: hidden;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,0.045) !important;
+  border: 1px solid rgba(255,255,255,0.04);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow:
+    inset 0 1px 2px rgba(0,0,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+.mantine-Progress-section {
+  background-color: var(--progress-section-color) !important;
+}
+
+.mantine-Progress-label {
+  color: var(--progress-label-color) !important;
+}
+
+
+/* =========================================================
+   10. MODALS, POPOVERS & DRAWERS
+   ========================================================= */
+
+/* GPU acceleration + glass surface */
+.mantine-Modal-content,
+.mantine-Modal-header,
+.mantine-Modal-body,
+[data-modal-content="true"],
+.mantine-Popover-dropdown,
+.mantine-Menu-dropdown,
+.mantine-Drawer-content {
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  contain: layout paint style;
+  background: rgba(10, 14, 22, 0.72) !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.05) !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.22) !important;
+  color: rgba(255,255,255,0.88) !important;
+}
+
+.mantine-Modal-content {
+  transition: opacity 80ms linear !important;
+}
+
+.mantine-Modal-overlay {
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  contain: layout paint style;
+  background: rgba(0,0,0,0.28) !important;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+.mantine-Modal-content * {
+  backdrop-filter: none !important;
+}
