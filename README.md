@@ -24,7 +24,8 @@ A naval-inspired glassmorphism theme for Homarr.
 
 ## Installation
 
-<p><strong><span style="color: #e03131;">⚠️ Note:</span></strong> <span style="color: #e03131;">Before applying the theme, finish your dashboard layout first - place all widgets, tiles, and sizing. Adjusting the layout after the theme is applied can cause display issues.</span></p>
+> [!CAUTION]
+> **Before applying the theme**, finish your dashboard layout first - place all widgets, tiles, and sizing. Adjusting the layout after the theme is applied can cause display issues.
 
 ### 1. Download Theme
 
